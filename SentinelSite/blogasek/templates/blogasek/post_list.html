@@ -1,0 +1,16 @@
+<html>
+<body>
+nic tu nie ma
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
+<BR>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+</body>
+</html>
