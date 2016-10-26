@@ -9,15 +9,17 @@
       <th>Tytuł</th>
       <th>Data</th>
       <th>Tekst</th>
+      <th>Szczegóły</th>
     </tr>
   </thead>
   <tbody>
     {% for post in posts %}
     <tr>
       <th scope="row">{{ forloop.counter }}</th>
-      <td><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></td>
+      <td>{{ post.title }}</td>
       <td>{{ post.published_date }}</td>
       <td>{{ post.text }}</td>
+      <td><a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"></span> </a></td>
     </tr>
     {% endfor %}
   </tbody>
