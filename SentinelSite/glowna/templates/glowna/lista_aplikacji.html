@@ -15,10 +15,30 @@
 	<li> <a href="/polls">polls</a> </li>
 	<li> <a href="/mapa">mapa</a> </li>
 </ul>
+Tak chyba wygląda to co chciałeś zrobić:
+<table class="table table-bordered table-striped">
 
+  <tbody>
+    {% for apka in aplikacje %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+		<td>{{ apka }}</td> 
+   </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br>
+Ale twoja wersja jest niepolecana - raczej nie wyciąga się bebechów konfiguracji na wierzch, mają od tego klasę opakowującą: <I>django.apps.apps </I>
+<BR>
+	{% for apka in aplikacyjki %}
+	{% endfor %}
+
+<!--
 <p>Na pocieszenie:</p>
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/a-CwwPXQl7Q" frameborder="0" allowfullscreen></iframe>
+--!>
+
     </body>
 </html>
 
