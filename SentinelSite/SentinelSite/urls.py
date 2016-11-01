@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     url(r'^blogasek/',include('blogasek.urls')),
+    url(r'',include('glowna.urls')),
 ]

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blogasek',
     'mapa',
+    'glowna',
 ]
 
 MIDDLEWARE_CLASSES = [
