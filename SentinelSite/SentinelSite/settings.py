@@ -25,7 +25,7 @@ SECRET_KEY = '^mp=w84j)$axz@wl@vx@ylaco*4s7_6ss&%b0+@nutqjp$#vmq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.25.25.1','127.0.0.1']
 
 
 # Application definition
@@ -77,10 +77,24 @@ WSGI_APPLICATION = 'SentinelSite.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
+#Stare i nieuzywane sqlite
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+
+    #Postgresql
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_test_db',
+        'USER': 'django_user',
+        'PASSWORD': 'django123_',
+        'HOST': '10.25.25.1',
+        'PORT': '5432',
+                                            
+                                            
     }
+    
 }
 
 
